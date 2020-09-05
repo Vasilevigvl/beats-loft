@@ -1,0 +1,8 @@
+.dropdown {
+  position: relative;
+}
+.dropdown__menu {
+  position: absolute;
+  background-color: #ffffff;
+  display: none;
+}

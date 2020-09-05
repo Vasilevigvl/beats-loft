@@ -1,0 +1,92 @@
+.team.team--version--desktop {
+  @include  tablets  {
+    display: none;
+  }
+}
+
+.team.team--version--mobile  {
+  display: none;
+
+  @include  tablets  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: rem(35px);
+  }
+}
+
+
+.team--version--mobile {
+  
+  .team__item{
+  margin-bottom: 25px;
+  margin-right: 0;
+  }
+}
+
+
+
+.team {
+  display: flex;
+
+  &__item {
+    position: relative;
+    margin-right: rem(20px);
+  }
+
+  &__content  {
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    height: 0px;
+    transition: height .3s;
+
+    @include  tablets  {
+      margin-left: rem(25px);
+    }
+
+  }
+
+
+  &__title  {
+    position: relative;
+    border: 0;
+    background: transparent;
+    height: rem(12px);
+    margin-left: rem(20px);
+    margin-top: rem(5px);
+    outline: none;
+    //white-space: nowrap;
+
+    &::after  {
+      position: absolute;
+      
+      content: url(./../../icons/pseudo__qube.png);
+      top: 5%;
+      right: -4%;
+    }
+    
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0;
+    
+  }
+
+  &__spec {
+    font-size: rem(16px);
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: rem(15px);
+  }
+
+  &__text {
+    font-size: rem(16px);
+    font-weight: 400;
+    color: #666666;
+    padding: 0 5%;
+  }
+}
